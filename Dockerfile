@@ -1,4 +1,4 @@
-FROM centos:lates
+FROM centos:latest
 RUN yum install httpd zip unzip -y
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page296/neogym.zip /var/www/html
 WORKDIR /var/www/html
