@@ -9,11 +9,11 @@ RUN yum update -y && \
     yum install -y httpd wget curl vim unzip
 
 #ADD  https://www.free-css.com/assets/files/free-css-templates/download/page296/oxer.zip /opt/
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page296/healet.zip /op/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page296/healet.zip /opt/
 WORKDIR /opt
 
 RUN unzip *.zip && \
-      rm *.zip && \
+   #   rm *.zip && \
       cp -r healet*/* /var/www/html/
 
 WORKDIR  /var/www/html
